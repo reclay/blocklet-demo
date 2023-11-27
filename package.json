@@ -1,6 +1,6 @@
 {
   "name": "blocklet-demo",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "scripts": {
     "dev": "blocklet dev",
     "start": "vite --host",
@@ -9,12 +9,14 @@
     "serve": "vite preview",
     "clean": "node scripts/build-clean.js",
     "bundle": "npm run clean && vite build && blocklet bundle --zip --create-release",
-    "deploy": "npm run bundle && blocklet deploy .blocklet/bundle",
+    "deploy": "npm run bundle && blocklet deploy .blocklet/bundle --app-id=zNKq4i7HbynB6XhYf9hiNfVfzXLZEWkNJBA1",
     "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json",
     "prepare": "husky install",
     "bump-version": "zx --quiet scripts/bump-version.mjs"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "element-plus": "^2.4.2",
     "vue": "^3.3.4"
   },
   "devDependencies": {
@@ -28,6 +30,7 @@
     "lint-staged": "^12.5.0",
     "prettier": "^2.8.8",
     "rimraf": "^3.0.2",
+    "sass": "^1.69.5",
     "vite": "^4.4.7",
     "vite-plugin-blocklet": "^0.6.15",
     "vite-plugin-node-polyfills": "^0.7.0",
